@@ -38,6 +38,7 @@
 
   --text-67: 67px;
   --text-51: 51px;
+  --text-50: 50px;
   --text-58: 58px;
   --text-38: 38px;
   --text-28: 28px;
@@ -147,7 +148,6 @@ header ul li a.active {
 .pera {
   font-size: 14px;
   line-height: 150%;
-  color: var(--color-gray-40);
 }
 @keyframes joomin {
   0% {

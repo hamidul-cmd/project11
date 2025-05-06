@@ -15,8 +15,8 @@ function CustomScrollTrigger({ children, onEnter, onExit }) {
       },
       {
         root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
+        rootMargin: "-50px 0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1],
       }
     );
 
@@ -33,7 +33,11 @@ function CustomScrollTrigger({ children, onEnter, onExit }) {
     };
   }, [onEnter, onExit]);
 
-  return <div ref={triggerRef}>{children}</div>;
+  return (
+    <div ref={triggerRef} className="ll:w-1/2">
+      {children}
+    </div>
+  );
 }
 
 export default CustomScrollTrigger;
