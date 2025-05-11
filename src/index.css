@@ -126,6 +126,9 @@ header ul li a.active {
 .l-150 {
   line-height: var(--leading-150);
 }
+.l-120 {
+  line-height: var(--leading-120);
+}
 .section {
   padding-inline: 16px;
   margin-bottom: 50px;

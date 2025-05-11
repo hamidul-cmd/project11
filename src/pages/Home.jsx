@@ -13,6 +13,18 @@ import absulute6 from "../assets/absulute6.png";
 import TrandsCird from "../components/TrandsCird";
 import journeyabs from "../assets/journeyabs.png";
 import JourneyCird from "../components/JourneyCird";
+import collectionabs from "../assets/collectionabs.png";
+import product1 from "../assets/product1.png";
+import product2 from "../assets/product2.png";
+import product3 from "../assets/product3.png";
+import product4 from "../assets/product4.png";
+import product5 from "../assets/product5.png";
+import product6 from "../assets/product6.png";
+import ProductCird from "../components/ProductCird";
+import TestimonialSection from "../components/TestimonialSection";
+import FaqSection from "../components/FaqSection";
+import ElevateSection from "../components/ElevateSection";
+
 function Home() {
   const herocapsule = ["all", "mens", "womens", "kids"];
   const [counterstart, setcounterstart] = useState(false);
@@ -230,6 +242,50 @@ function Home() {
       pera: "Unbox a fashion-forward experience delivered right to your door, ready to elevate your style.",
     },
   ];
+  const collectionData = [
+    {
+      capsule: "Womenswear",
+      title: "Timeless A-line Evening Dress",
+      fit: "Ankle-length",
+      price: "109.99",
+      img: product1,
+    },
+    {
+      capsule: "Womenswear",
+      title: "Floral Bloom Maxi Dress",
+      fit: "Slim Fit",
+      price: "54.99",
+      img: product2,
+    },
+    {
+      capsule: "Womenswear",
+      title: "Elegant Evening Gown",
+      fit: "Flowing skirt",
+      price: "89.99",
+      img: product3,
+    },
+    {
+      capsule: "Womenswear",
+      title: "Urban Chic Handbag",
+      fit: "Spacious",
+      price: "49.99",
+      img: product4,
+    },
+    {
+      capsule: "Womenswear",
+      title: "Sophisticate Sun Hat",
+      fit: "One size fits all",
+      price: "24.99",
+      img: product5,
+    },
+    {
+      capsule: "Womenswear",
+      title: "Boho Chic Printed Scarf",
+      fit: "Lightweight",
+      price: "19.99",
+      img: product6,
+    },
+  ];
   return (
     <>
       {/* hero section code start */}
@@ -359,6 +415,25 @@ function Home() {
         </div>
       </section>
       {/* journey section code end */}
+      {/* collection section code start */}
+      <section className="section">
+        <div className="wrapper border-2 border-dashed border-dark-15 rounded-14 xll:rounded-2xl 3xl:rounded-20">
+          <CommonTitle
+            title="Elevate Your Style with Our Latest Collection"
+            pera="Each piece is crafted to enhance your fashion statement."
+            img={collectionabs}
+          />
+          <div className="grid grid-cols-1 ll:grid-cols-3">
+            {collectionData.map((item, i) => (
+              <ProductCird item={item} key={i} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* collection section code end */}
+      <TestimonialSection />
+      <FaqSection />
+      <ElevateSection />
     </>
   );
 }
