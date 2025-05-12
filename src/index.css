@@ -148,10 +148,6 @@ header ul li a.active {
 .hero__bg {
   animation: joomin 7s linear infinite alternate-reverse;
 }
-.pera {
-  font-size: 14px;
-  line-height: 150%;
-}
 @keyframes joomin {
   0% {
     transform: scale(1);
@@ -160,10 +156,39 @@ header ul li a.active {
     transform: scale(1.3);
   }
 }
+.pera {
+  font-size: 14px;
+  line-height: 150%;
+}
+.footerinfinitescroll {
+  animation: infiniteScroll 10s linear infinite;
+}
+.footerinfinitescroll:hover {
+  animation-play-state: paused;
+}
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
 @media (min-width: 800px) {
   .section {
     padding-inline: 40px;
     margin-bottom: 60px;
+  }
+  .footerinfinitescroll {
+    animation: infiniteScroll 7s linear infinite;
+  }
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-40% - 0.5rem));
+    }
   }
 }
 @media (min-width: 1440px) {
@@ -173,6 +198,14 @@ header ul li a.active {
   }
   .pera {
     font-size: 16px;
+  }
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-30% - 0.5rem));
+    }
   }
 }
 
@@ -190,5 +223,16 @@ header ul li a.active {
   }
   .pera {
     font-size: 18px;
+  }
+  .footerinfinitescroll {
+    animation: infiniteScroll 10s linear infinite;
+  }
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-30% - 0.5rem));
+    }
   }
 }
