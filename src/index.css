@@ -225,14 +225,14 @@ header ul li a.active {
     font-size: 18px;
   }
   .footerinfinitescroll {
-    animation: infiniteScroll 10s linear infinite;
+    animation: infiniteScroll 7s linear infinite;
   }
   @keyframes infiniteScroll {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-30% - 0.5rem));
+      transform: translateX(calc(-20% - 0.5rem));
     }
   }
 }

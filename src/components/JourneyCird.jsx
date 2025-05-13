@@ -5,7 +5,7 @@ function JourneyCird({ item, index }) {
     <>
       <div
         className={`p-7.5 border-dashed border-dark-15 xll:p-10 3xl:p-12.5 ${
-          (index === 0 && "border-b-2 ll:border-r-2 ll:border-b-0") ||
+          (index === 0 && "border-b-2 ll:border-r-2") ||
           (index === 1 && "border-b-2 xll:border-r-2 xll:border-b-0") ||
           (index === 2 && "border-b-2 ll:border-b-0 ll:border-r-2")
         }`}
